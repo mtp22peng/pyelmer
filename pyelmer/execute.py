@@ -23,7 +23,7 @@ def run_elmer_grid(sim_dir, meshfile, elmergrid=None):
         else:
             elmergrid = "ElmerGrid"
 
-    args = [elmergrid, "14", "2", meshfile]
+    args = [elmergrid, "8", "2", meshfile]
     with open(sim_dir + "/elmergrid.log", "w") as f:
         subprocess.run(args, cwd=sim_dir, stdout=f, stderr=f)
 
